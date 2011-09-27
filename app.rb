@@ -14,6 +14,7 @@ set :cache, Dalli::Client.new
 enable :sessions
 
 get '/' do
+  @logged_in = !session[:access_token].nil?
   erb :index
 end
 

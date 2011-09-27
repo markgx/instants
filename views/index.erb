@@ -1,3 +1,5 @@
 <h2>Hi</h2>
 
-<p>There.</p>
+<% unless @logged_in %>
+  <p><a href="/login">Log in</a></p>
+<% end %>
