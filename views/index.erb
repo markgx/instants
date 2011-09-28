@@ -1,5 +1,11 @@
-<h2>Hi</h2>
+<p>An <a href="http://instagram.com/">Instagram</a> viewer. Coming soon.</p>
 
 <% unless @logged_in %>
   <p><a href="/login">Log in</a></p>
 <% end %>
+
+<div>
+  <% @images.each do |image| %>
+    <img src="<%= image.images.thumbnail.url %>" />
+  <% end %>
+</div>

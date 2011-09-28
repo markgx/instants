@@ -15,6 +15,13 @@ enable :sessions
 
 get '/' do
   @logged_in = !session[:access_token].nil?
+
+  @images = settings.cache.get('popular')
+  if @images.nil?
+    @images = Instagram.media_popular
+    settings.cache.set('popular', @images, 600)
+  end
+
   erb :index
 end
 
