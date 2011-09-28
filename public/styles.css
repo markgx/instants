@@ -1,3 +1,25 @@
+body {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 100%;
+  background-color: #222;
+  color: #ddd;
+  margin: 20px;
+}
+
+a:link, a:visited {
+  color: #e6fbb1;
+}
+
+a:hover {
+  color: #fece2b;
+}
+
+header h1 {
+  font-family: 'La Belle Aurore', cursive;
+  font-size: 250%;
+  margin: 0;
+}
+
 #container {
   width: 700px;
   margin-left: auto;
