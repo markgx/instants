@@ -19,7 +19,7 @@ get '/' do
   @images = settings.cache.get('popular')
   if @images.nil?
     @images = Instagram.media_popular
-    settings.cache.set('popular', @images, 600)
+    settings.cache.set('popular', @images, 120)
   end
 
   erb :index
